@@ -145,7 +145,7 @@
 		z-index: -1;
 
 		& + label {
-			@include icon;
+			@include icon(false, solid);
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1rem;
@@ -162,9 +162,10 @@
 				border: solid 2px;
 				content: '';
 				display: inline-block;
+				font-size: 0.8rem;
 				height: (_size(element-height) * 0.6);
 				left: 0;
-				line-height: (_size(element-height) * 0.575);
+				line-height: (_size(element-height) * 0.55);
 				position: absolute;
 				text-align: center;
 				top: -0.125rem;

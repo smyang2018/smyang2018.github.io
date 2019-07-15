@@ -39,12 +39,13 @@
 		}
 
 		.next, .previous {
-			@include icon;
+			@include icon(false, solid);
 			padding: 0 1.75rem;
 
 			&:before {
 				display: inline-block;
 				color: inherit !important;
+				line-height: inherit;
 			}
 		}
 
