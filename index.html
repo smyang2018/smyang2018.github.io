@@ -563,6 +563,9 @@ setInterval(updateDateTime, 1000); // 每秒钟更新一次
 </body>
 </html>
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -580,12 +583,38 @@ setInterval(updateDateTime, 1000); // 每秒钟更新一次
     margin-top: 50px;
     text-align: center;
   }
+
+  /* 右侧链接容器 */
+  .right-links {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    text-align: center;
+  }
+
+  /* 右侧链接样式 */
+  .right-links a {
+    display: block;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+
+  .right-links a:hover {
+    text-decoration: underline;
+  }
 </style>
 </head>
 <body>
 
-<!-- 标题链接 -->
-<div class="title" onclick="goToLink('https://smyang2018.github.io/sms2/sms2/')">sms2</div>
+<!-- 右侧链接 -->
+<div class="right-links">
+  <a href="https://smyang2018.github.io/sms2/sms2/">SMS2</a>
+  <a href="https://www.example.com/link2">右侧链接2</a>
+  <!-- 添加更多链接 -->
+</div>
 
 <!-- JavaScript 脚本，用于跳转 -->
 <script>
