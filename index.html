@@ -552,54 +552,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -607,11 +559,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>显示日期和时间</title>
 <style>
-  /* 样式用于固定在右下角 */
+  /* 初始样式 */
   .datetime {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
     background-color: #f0f0f0;
     padding: 10px;
     border: 1px solid #ccc;
@@ -619,6 +569,7 @@
     font-family: Arial, sans-serif;
     font-size: 140%; /* 放大10倍 */
     color: #0000FF; /* 文字颜色为蓝色 */
+    transition: transform 0.5s ease; /* 添加移动的过渡效果 */
   }
 </style>
 </head>
@@ -654,6 +605,13 @@ function updateDateTime() {
   
   // 更新页面中的内容
   document.getElementById('datetime').innerHTML = datetimeStr;
+  
+  // 生成随机位置
+  var x = Math.random() * (window.innerWidth - 200); // 200 是容器宽度的一部分，确保不会超出边界
+  var y = Math.random() * (window.innerHeight - 100); // 100 是容器高度的一部分
+  
+  // 设置随机位置
+  document.getElementById('datetime').style.transform = 'translate(' + x + 'px, ' + y + 'px)';
 }
 
 // 页面加载时更新一次时间，并且每秒更新一次
@@ -691,39 +649,47 @@ setInterval(updateDateTime, 1000); // 每秒钟更新一次
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>网站内容搜索</title>
-<link rel="stylesheet" href="styles.css"> <!-- 引入样式表 -->
-</head>
-<body>
 
-<header>
-  <div class="container">
-    <h1>蚂蚁生信</h1>
-    <div class="search-container">
-      <form id="search-form">
-        <input type="text" id="search-input" placeholder="搜索...">
-        <button type="submit">搜索</button>
-      </form>
-    </div>
-  </div>
-</header>
 
-<main>
-  <!-- 这里是你网站的主要内容 -->
-</main>
 
-<footer>
-  <!-- 这里是页脚内容 -->
-</footer>
 
-<script src="script.js"></script> <!-- 引入脚本文件 -->
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
