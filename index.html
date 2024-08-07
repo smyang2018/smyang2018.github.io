@@ -507,6 +507,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>显示日期和时间</title>
 <style>
+  /* 样式用于固定在右下角 */
+  .datetime {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 140%; /* 放大10倍 */
+    color: #0000FF; /* 文字颜色为蓝色 */
+  }
+</style>
+</head>
+<body>
+
+<div class="datetime" id="datetime"></div>
+
+<script>
+function updateDateTime() {
+  // 获取当前时间对象
+  var now = new Date();
+  
+  // 获取年月日
+  var year = now.getFullYear();
+  var month = now.getMonth() + 1; // 月份从0开始，需要加1
+  var day = now.getDate();
+  
+  // 获取星期
+  var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var weekday = weekdays[now.getDay()];
+  
+  // 获取当前时间
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  
+  // 格式化时间，确保单数数字前面补0
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+  
+  // 构造要显示的日期时间字符串
+  var datetimeStr = year + '-' + month + '-' + day + ', ' + weekday + '<br>' + hours + ':' + minutes + ':' + seconds;
+  
+  // 更新页面中的内容
+  document.getElementById('datetime').innerHTML = datetimeStr;
+}
+
+// 页面加载时更新一次时间，并且每秒更新一次
+updateDateTime();
+setInterval(updateDateTime, 1000); // 每秒钟更新一次
+</script>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>显示日期和时间</title>
+<style>
   /* 初始样式 */
   .datetime {
     position: fixed;
