@@ -459,3 +459,50 @@
   </div>
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>显示当前日期</title>
+</head>
+ 
+<body onload="currenttime()">
+    <h2 align="center" style="color: blue;">软的时间日期对象</h2>
+    <h1 align="center" id="htime" style="color: red;"></h1>
+    <script>
+        function currenttime(){
+            var weekDay =["日","一","二","三","四","五","六"];
+            //获取htime元素
+            var htime =document.getElementById('htime');
+            //每一秒更新一次时间
+            setInterval(function(){
+            //创建Date对象
+            var date =new Date();
+            //获取年份
+            var year= date.getFullYear();
+            //获取月并补0
+            var month=(date.getMonth()+1).toString().padStart(2,'0');
+            //获取日并补0
+            var day=date.getDate().toString().padStart(2,'0');
+            //获取小时数并补0
+            var hours=date.getHours().toString().padStart(2,'0');
+            //获取分钟数并补0
+            var minutes=date.getMinutes().toString().padStart(2,'0');
+            //获取秒数并补0
+            var seconds=date.getSeconds().toString().padStart(2,'0');
+            //获取星期几
+            var weekday=weekDay[date.getDay()];
+            //拼接字符串写到htime里面
+            var timeStr="今天是："+year+"年"+month+"月"+day+"日"+hours+"时"+minutes+"分"+seconds+"秒"+"星期"+weekday;
+            htime.innerHTML=timeStr;
+            },1000)
+        }
+    </script>
+</body>
+ 
+ 
+</html>
