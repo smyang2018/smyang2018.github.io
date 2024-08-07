@@ -461,6 +461,45 @@
 </html>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -519,6 +558,40 @@ function updateDateTime() {
 // 页面加载时更新一次时间，并且每秒更新一次
 updateDateTime();
 setInterval(updateDateTime, 1000); // 每秒钟更新一次
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>首页</title>
+<style>
+  /* 样式用于标题链接 */
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 50px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<!-- 标题链接 -->
+<div class="title" onclick="goToLink('https://smyang2018.github.io/sms2/sms2/')">sms2</div>
+
+<!-- JavaScript 脚本，用于跳转 -->
+<script>
+function goToLink(url) {
+  window.location.href = url;
+}
 </script>
 
 </body>
