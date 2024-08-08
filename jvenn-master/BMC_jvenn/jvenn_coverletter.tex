@@ -1,0 +1,64 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Long Lined Cover Letter
+% LaTeX Template
+% Version 1.0 (1/6/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Matthew J. Miller
+% http://www.matthewjmiller.net/howtos/customized-cover-letter-scripts/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+\usepackage{charter} % Use the Charter font for the document text
+
+\newlfmP{sigsize=30pt} % Slightly decrease the height of the signature field
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{Jerome Mariette} % Name
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{BMC bioinformatics editorial board,} % Greeting text
+\closeline{Sincerely yours,} % Closing text
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+The present cover letter is pertaining to the paper "jvenn: an interactive venn diagram viewer".
+
+For 10 years we have been working in animal and plant genomics. Our aim has always been to provide biologists with a user friendly environment 
+to present their results in a simple but rich manner. With jvenn we provide a javascript library which is embedable in any web-platform to 
+interactively display Venn diagrams. This could be compared to Cytoscape-Web or jHeatmap both published in Bioinformatics. jvenn is the only 
+library able to handle up to 6 input lists presenting results as classical or Edwards-Venn diagrams and has already been cited in two scientific 
+publications and is part of three web applications. 
+
+This paper is unpublished and has not been submitted for publication elsewhere.
+We would be grateful if you would consider it for publication in BMC bioinformatics.
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}

@@ -1,0 +1,304 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Long Lined Cover Letter
+% LaTeX Template
+% Version 1.0 (1/6/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Matthew J. Miller
+% http://www.matthewjmiller.net/howtos/customized-cover-letter-scripts/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+\usepackage{charter} % Use the Charter font for the document text
+
+\newlfmP{sigsize=30pt} % Slightly decrease the height of the signature field
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{Jerome Mariette} % Name
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{BMC bioinformatics editorial board,} % Greeting text
+\closeline{Sincerely yours,} % Closing text
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+The present cover letter is pertaining to the paper "jvenn: an interactive venn
+diagram viewer". This paper has already been submitted to BMC Bioinformatics 
+under the ID 1449643681123201. After the review process, we were asked to
+solve the concerns addressed. We made the requested modifications and we added 
+new features to jvenn presented in the manuscript. Hereafter are our answers 
+to the reviewers.
+
+
+
+\textbf{-- Reviewer 1 --}
+
+\textbf{1. The manuscript is sloppy / hand-wavy / not detailed enough in many
+ways. A few examples are listed below. The authors need to fix these before I
+can make a decision.}
+
+\textbf{- URL running off the page 3}
+
+The URL have been changed to fit the page size. 
+
+\textbf{- run-on sentences}
+
+The organisation of the sections and paragraphs of the text has been modified.
+Many sentences have been rewritten.
+
+\textbf{- what is a standard linux computer?}
+
+The sentence ``Using the running version on a standard Linux computer (1 cpu,
+4GB of RAM)'' has been added.
+
+\textbf{- "whoever has some WEB programming skills" is a very vague way of
+defining a user base}
+
+The sentences have been modified as following: ``whoever has some JavaScript 
+programming skills''
+
+\textbf{- I recommend rewording the first paragraph; I had a hard time following
+the logic in the way it is currently written. The point you are trying to make 
+should be more clearly stated: diagrams are easy to read for up to four
+categories but more features are needed for 5 or 6.}
+
+The Background section has been fully rewritten.
+
+\textbf{- how many sets do [4] and [5] allow for?}
+
+They respectivly handle 3 and 4 lists. This has been added to the manuscript.
+
+
+\textbf{- there are many weird or poorly designed sentence structures (e.g.:
+"The library provides an option to de ne the data inputs: series.") and quite a 
+few typos ("embeded", "overlights"?). I recommend the authors have the manuscript
+checked by an editor or at least an English speaker.}
+
+Many sentences have been rewritten as requested. 
+
+\textbf{- the paper was submitted in the software category but at the top it
+says research? I was a little confused by this.}
+
+The section title of the manuscript has been changed for ``Software''.
+
+\textbf{2. The manuscript is more or less a list of features. I feel there needs
+to be a little more depth and insight in a scholarly article. For example, how
+do  the features mentioned in paragraph two of the results and discussion
+alleviate  the problem mentioned in the first paragraph? I have checked the two
+papers  that cite the software (10,11) and both show only the venn diagram and
+not  any of the other lists. How did the papers (10,11) use it and why couldn't 
+they use another library? Perhaps a brief mention of other ways to
+look/visualize this data might be worth it:}
+
+The organisation of the manuscript has been modified and several paragraph have
+been rewritten. 
+The two papers citing jvenn used it to built a publishable diagram. They used
+jvenn because it is the only Web application available allowing users to provide
+5 lists. To produce such a diagram they could have use VENNTURE as well, but
+this application is only available under MS-Windows and only produce Powerpoint
+outputs under the Edwards-Venn layout.
+
+\textbf{-- Reviewer 2 --}
+
+\textbf{ -Major Compulsory Revisions
+For the manuscript:
+1. In the Background section, the authors list a number of libraries designed
+for web applications such as BioVenn, venny, Canvasxpress, and the Google Chart 
+API. However, there are number of other Venn diagram drawing libraries that are 
+not directly embeddable in a webpage. Yet, the authors should note these
+libraries as well. Two that come to mind are: The VennDiagram R package, which 
+supports up to five lists. VENNTURE, which supports up to six lists Martin B, 
+Chadwick W, Yi T, Park SS, Lu D, Ni B, Gadkaree S, Farhang K, Becker KG,
+Maudsley  S. VENNTURE Novel Venn Diagram Investigational Tool for Multiple 
+Pharmacological Dataset Analysis.}
+
+These 2 citations and the description of the tools have been added in the
+Background section.
+
+\textbf{2. The authors claim that jvenn is the only library to accommodate up
+to six input lists. VENNTURE (cited above) can produce Edwards-Venn
+diagrams with up to six lists; thus their statement is incorrect.}
+
+VENNTURE citation has been added to the manuscript. jvenn remains the only
+tools handling 6 lists as inputs written to be included in Web applications.
+Moreover it is the only software package offering classical Venn diagram displays
+for 6 input lists.
+
+\textbf{Also the authors point out that venny does not visualize the relative
+areas of the intersecting sets; neither does jvenn, from what I can
+tell. Is this a current limitation of jvenn or an explicit decision?}
+
+This is right, all softwares displaying a relative areas Venn diagram handle up
+to 3 lists. Beyond that, displaying the graphic is a complex problem.
+
+\textbf{3. The jvenn library appears to be built upon the venny library;
+however this distinction is unclear. In the implementation section,
+the authors should more clearly emphasize their contribution to the
+software, which appears to be modifying venny to handle more than 4
+sets of items. A clear statement about the novel contributions (with
+respect to the library) will strengthen the paper.}
+
+jvenn is only using the venny algorithm to compute the lists intersection.
+The sentence ``jvenn intersection computing algorithm is based on venny.'' has 
+been added to the Implementation section.
+
+
+\textbf{4. The authors should describe the three different data formats.
+Table 1 shows good examples of the inputs, but "count lists" is
+particularly unintuitive. This description could go in the
+Implementation section, where the authors reference the table.}
+
+A full explanation of the formats and a specific example of the "count lists"
+has been added in the Implementation section.
+
+\textbf{For the web application: 5. There is no help page on the web
+application. The wiki page is quite useful, however. At the very least, there
+should be a link to the wiki page to help answer user's questions. Adding a 
+tutorial might increase usage as well.}
+
+The full documentation is now online and a user manuel has been written to help
+our Web application users.
+
+\textbf{6. The web application was down for a time between 4/12 and 4/13,
+which slowed the revision process. If this is a semi-regular
+occurrence, I advise moving the application to a more reliable server.}
+
+This was unfortunate, the server is reliable and monitored by our system
+administrator team.
+
+\textbf{7. The "on/off" switch buttons for the classic view and six lists are
+quite confusing. I expected the diagram to change when I clicked
+these. Perhaps a title or a box explaining their use would be better.}
+
+We made modifications on this feature. The "on/off" switch buttons now
+highlights the intersection figure.
+
+
+\textbf{Minor Essential Revisions
+Throughout: \newline
+- WEB -> web or Web \newline
+- javascript -> JavaScript \newline
+- developper -> developer \newline
+- Be consistent with six vs. 6 \newline
+Title and Abstract: \newline
+- venn should be capitalized in the title (though BMC Bioinformatics
+might make everything lower-case - disregard if this is true). \newline
+- embadable -> embeddable \newline
+- allows [users] to control and customize all user interaction \newline
+- awkward phrase: helping scientists to analyse their data \newline 
+- The library package, [which comes] with [] full documentation \newline
+- vizualization -> visualization \newline
+Background: \newline
+- awkward phrase: Biological projects are increasingly multiplexing
+samples - what's a multiplexing sample? \newline
+- availble -> available \newline
+- These libraries generate [] graphical \newline
+- cannot perform [] calculations \newline
+- awkward phrase: permits to overload the callback function \newline}
+
+All these spelling and sentence errors have been taken into account.
+
+\textbf{Results and Discussion:\newline
+- In general, there are many sentences in this section that are more
+implementation details (such as the question mark, pop-ups, and
+mouse-over). If possible, try to describe these items in the
+Implementation section.}
+
+All parameters description were moved to the Implementation as recommended.
+
+\textbf{- Nowadays, this type of diagrams is able to present -> Nowadays,
+these types of diagrams are able to present\newline
+- "Nowadays" is incorrect - Venn diagrams have always been
+able to visualize multiple lists.\newline
+- diagrams are not proportional [to] the list counts\newline
+- functionnalities -> functionalities\newline
+- figures readibility -> figure's readability\newline
+- on click function -> one-click function\newline
+- awkward phrase: It allows users to check the list size homogeneity.\newline
+- The second one[] displays the number\newline
+- jvenn performances -> jvenn's performance\newline}
+
+All these spelling and sentence errors have been taken into account.
+
+\textbf{Conclusions and References:\newline
+- The fact that jvenn is already embedded within four web applications
+is impressive! I would add this fact in the Background section.}
+
+Taken into account.
+
+\textbf{- Venny is incorrectly cited - please provide the author and year}
+
+The citation has been modified to add the author and year.
+
+\textbf{- Some of the references have incorrect author names: last names are
+followed by a,b,c, etc , presumably from institution references. Please fix.}
+
+All the references were checked and standardized.
+
+\textbf{Discretionary Revisions
+For the manuscript:
+- In the background, "allows three different data formats
+(lists/intersection counts/count lists)" is misleading - looks like
+two fractions and an integer. I'd suggest (list, intersection counts,
+and count lists).
+- The reference to jvenn in citation [11] is a dead link.}
+
+Taken into account.
+
+\textbf{- The authors should describe the difference between a classical and
+Edwards-Venn diagrams. This description can be brief (1-2 sentences).}
+
+A description of Edwards-Venn diagrams has been added to the manuscript. 
+
+\textbf{- The jvenn url goes off the page under 'Availability and requirements'
+For the web application:}
+
+The URL have been changed to fit the page size. 
+
+\textbf{- The text box under "click on a number to show the corresponding
+elements" is writable, which was initially confusing.}
+
+This has been changed, the textarea is set as readonly, users are no longer able 
+to edit it but can still copy its content.
+
+\textbf{- In the horizontal bar plot, labeling the numbers in the box and the
+numbers on the x-axis would clarify the plot.}
+
+The graphic title has been changed for ``Number of elements: specific(1) or
+shared by 2, 3, \ldots lists''. This graphic is also explained in the
+user manual section.
+
+
+This paper is unpublished and has not been submitted for publication elsewhere. 
+We would be grateful if you would consider it for publication in BMC 
+bioinformatics.
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}

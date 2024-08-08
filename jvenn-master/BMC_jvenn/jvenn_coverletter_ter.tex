@@ -1,0 +1,244 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Long Lined Cover Letter
+% LaTeX Template
+% Version 1.0 (1/6/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Matthew J. Miller
+% http://www.matthewjmiller.net/howtos/customized-cover-letter-scripts/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+\usepackage{charter} % Use the Charter font for the document text
+
+\newlfmP{sigsize=30pt} % Slightly decrease the height of the signature field
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{Jerome Mariette} % Name
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{BMC bioinformatics editorial board,} % Greeting text
+\closeline{Sincerely yours,} % Closing text
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+The present cover letter is pertaining to the paper "jvenn: an interactive Venn
+diagram viewer". Hereafter are our answers to the reviewers.
+
+
+\textbf{-- REVIEWER 1 --}
+
+\textbf{1. The authors do a comprehensive job of describing other Venn
+diagram viewers. The bulleted list could be turned into a paragraph
+summarizing the benefits and limitations. However, they fail to
+clearly explain the benefits of jvenn that overcome limitations of
+other methods. The table provides this information, but it should go
+in the last paragraph of the Background.}
+
+The bulleted list has been removed and replaced by a paragraph, concluded by a
+sentence summarizing the benefits of jvenn.
+
+
+\textbf{2. In the first round of revisions, Reviewer 1 noted that the
+manuscript is written like a set of features, with relatively little
+depth. The user-interaction and web developer details make parts of the paper
+sound more like an API than an article. Explaining different variable names
+in the paper such as shortNumber & fnClickCallback are not important; what's
+important is that the library supports the intersection of large lists by
+modifying the information displayed, and allows developers to customize the 
+callback function for selecting an intersection.}
+
+All parameters and options descriptions have been removed. All sentences
+explaining the configuration have been deleted from the manuscript.
+
+
+\textbf{3. The authors should carefully consider the organization of the
+paper, namely, the Implementation, Results & Discussion, and
+Conclusions. There are implementation details described in the
+Results & Discussion section, which de-emphasizes the major points of
+the section. Further, the Conclusions section is not concluding the
+main points of the article; instead it introduces other minor details
+of jvenn that have not be adequately described.}
+
+The organisation of the paper has been modified. The section ``implementation''
+is now described by five sub sections: ``Inputs'', ``Display features'',
+``Outputs'', ``Integration'' and ``Web application''. The ``Results &
+Discussions'' section has been splited into two distincts sections.
+
+
+\textbf{4. Some sentences are still awkwardly-phrased; instead of run-on
+sentences, there are many sentences that are too short / sentence
+fragments. Some examples include:\newline
+- "All are JSON objects."\newline
+- "jvenn intersection computing algorithm is based on venny."\newline
+- "This is true for up to four lists."\newline
+- "The value pops up on mouse-over."}
+
+Taken into account.
+
+
+\textbf{- First paragraph of Background: "Venn diagram[s] with up to four lists
+are easy to read and understand..."\newline
+- Capitalization consistency for "Count" and "Lists" when describing
+the inputs.\newline
+- Second paragraph of Results & Discussion: "jvenn implements (Fig. 1)
+several functionalities" - move figure reference to end of sentence.\newline
+- Conclusion: "whoever has some JavaScript programming" is too
+informal. Refer to comment from Reviewer 1 in first round of reviews\newline}
+
+Taken into account. The sentence ``whoever has some JavaScript programming \ldots''
+has been replaced by ``jvenn allows programmers having only moderate JavaScript
+experiences to embed Venn diagrams in a web page without dependency.''
+
+
+\textbf{-- REVIEWER 2 --}
+
+\textbf{The paragraph that starts with "The Web application developer can de#ne
+the diagram display by setting the display Type option to edwards or classic..." -
+sounds like something that should go on a webpage for the project. You can
+keep information about what the system is able to do, what features it has, but I
+think you can skip on some of the low level details about how it is achieved.
+Readers will want to know what can be done and that it can be done
+in an easy way. State this and skip the details.}
+
+All options and parameters descriptions have been removed from the manuscript.
+
+
+\textbf{For me, a lot of the information in results and discussion sound like
+features and very much like the kind of information you have in your Implementation section. I
+encourage you to think hard about what the features are and what the results are
+and separate them. Results are things that couldn't be done before and can be
+done know with your system. There's a difference between
+a feature (method to do something) and what it can accomplish (result). Here are
+a few examples:
+"The extra charts presented under the Venn diagram simplify veri#cation and
+comparison of multiple diagrams." - this is the result (though you don't provide
+any proof that they do simplify...)
+"the display can be switched to Edwards-Venn" - method
+"gives a clearer graphical representation for six list diagrams" - result.}
+
+The paper has been fully re-organised and a complet example of jvenn usage has
+been added in the ``Results'' section.
+
+
+\textbf{"whoever has some" - this sounds very hand wavy! I know what you mean
+but try to make it sound more appropriate for a paper. "programers with moderate
+Javascript experience"?}
+
+This sentence has been replaced by: ``jvenn allows programmers having only
+moderate JavaScript experiences to embed Venn diagrams in a web page without
+dependency.''
+
+
+\textbf{fix: "Venn diagramS with up to four lists are easy to read and
+understand,"}
+
+Taken into account.
+
+
+\textbf{in: "With “Count lists” the #gures presented in the diagram
+correspond to the sums of counts of all identi#ers shared between lists. This has
+been used in diversity studies to present OTU (Operational Taxonomic Unit) read
+counts" -- does "with cl" mean "when count lists are used?". Also, "this" at the
+beginning of the second sentence is a little ambiguous... qualify it
+"It includes, as well, search and intersection identi#ers export functions." - a little
+unclear what will be exported}
+
+This section has been fully rewritten.
+
+
+\textbf{I'm not really satisfied with how the authors addressed my comments
+about this being a bag of features and lacking scientific depth. However, since
+this is a software component, that's probably fine and I'll let this pass as long
+as the authors put in the effort to make the writing more rigorous}
+
+All features description have been removed and a usage example has been added in
+the ``Results'' section. jvenn benefits are then presented in the ``Discussion''
+section.
+
+
+\textbf{-- EDITOR'S COMMENTS --}
+
+\textbf{1. the Results section needs to contain an example case study for a
+biological problem, preferably following this template:\newline
+* a short description of the biological problem, \newline
+* a brief description of how the problem was approached using jvenn, \newline
+* any interesting/unusual findings facilitated by jvenn, \newline
+* any jvenn feedback on specific features used in this case, \newline
+* how long it took to solve the problem using jvenn, and \newline
+* a short description of how the problem would have been solved otherwise and
+how long it would have taken.\newline}
+
+An example provided by M.A. Dillies and colleagues have been added to the paper,
+all the analysis steps have been described and compared to VENNTURE the only
+tool able to produce six lists Venn diagrams.
+
+\textbf{In contrast, the current Results section is a list of jvenn
+functionality; this list belongs in the system description (see reviewer
+comments), not in the Results section. See also both reviewer comments regarding
+this issue, in both review rounds.}
+
+The tool description has been moved to the ``Implementation'' section which has
+been fully re-organised in five sub sections: ``Inputs'', ``Display features'',
+``Outputs'', ``Integration'' and ``Web application'' .
+
+
+\textbf{2. The Discussion section needs to iterate over the advantages of using
+jvenn, based on the Results above; then list limitations, assumptions in the
+approach, its relation to existing software etc. Mimi Zeiger's "Essentials of
+Writing Biomedical Research Papers" is an excellent resource in this respect.}
+
+The ``Results & Discussions'' section has been splited into two distincts
+sections. The discussion describes the benefit using jvenn compared to VENNTURE.
+
+
+\textbf{3. A short biological motivation should be added to the first paragraph
+of the Introduction, and also to the abstract; with specific examples of
+biological use of Venn diagrams. Many of the BMC Bioinformatics readers are
+biologists, and this is the audience that needs to be convinced to use the
+software. The current intro and abstract are too generic.}
+
+An introduction with biological examples has been added in the ``Background''
+section and in the ``abstract''.
+
+
+\textbf{4. The language should be further improved (see individual reviewer
+comments).}
+
+The paper has been reed and corrected by an english native speaker.
+
+
+
+This paper is unpublished and has not been submitted for publication elsewhere. 
+We would be grateful if you would consider it for publication in BMC 
+bioinformatics.
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}
